@@ -178,67 +178,28 @@ h2 {
     filter: drop-shadow(0 0 10px var(--accent-color));
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     margin-top: 20px;
 }
 
-.project {
-    background: var(--glass-background);
-    border-radius: 10px;
-    padding: 20px;
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInProject 1s ease-out forwards;
+.btn {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--accent-color);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-@keyframes fadeInProject {
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.project:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-}
-
-.project h3 {
-    margin-top: 0;
-    color: var(--accent-color);
-}
-
-.project p {
-    font-size: 0.9em;
-}
-
-.project a {
-    display: inline-block;
-    margin-top: 10px;
-    color: var(--secondary-accent);
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.project a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: var(--secondary-accent);
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
-}
-
-.project a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+.btn:hover {
+    background: var(--secondary-accent);
 }
 
 footer {

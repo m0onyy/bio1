@@ -13,7 +13,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-image: url('https://www.dropbox.com/scl/fi/xxxxxx/image.jpg?raw=1'); /* Update this link */
+    background-image: url('https://media4.giphy.com/media/BMu2SwuXflOlQP8jTC/giphy.gif?cid=6c09b952oz69ujy9tuozkejvrmicz0f3ol3m2fitv54vfa43&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -282,38 +282,7 @@ footer {
 }
 
 .footer-text {
-    font-size: 0.8rem;
+    font-size: 0.8em;
     color: var(--text-color);
     margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-    .profile-img {
-        width: 120px;
-        height: 120px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .projects {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .contact-images {
-        flex-direction: column;
-    }
-
-    .contact-images a {
-        margin: 10px 0;
-    }
-
-    .footer-text {
-        font-size: 0.7rem;
-    }
 }

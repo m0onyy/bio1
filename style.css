@@ -13,16 +13,27 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-image: url('https://www.dropbox.com/scl/fi/nbkknttupzwkjxtqrsx3f/Galaxy.jpg?rlkey=0yxjcicre0pqoncgqfgpm750i&st=30o7aeul&raw=1');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
+.background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Keep the video behind the content */
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensure the video covers the entire background */
+}
+
 .container {
+    position: relative; /* Keep other content positioned over the video */
+    z-index: 1; /* Make sure the content appears above the video */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -277,12 +288,48 @@ footer {
     fill: var(--text-color);
 }
 
-.music-icon:hover {
-    fill: var(--accent-color);
+.footer-text {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-top: 10px;
+    animation: fadeIn 1s ease-out;
 }
 
-.footer-text {
-    font-size: 0.8em;
-    color: var(--text-color);
-    margin-top: 10px;
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-images {
+        flex-direction: column;
+    }
+
+    .music-control {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 3%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
 }

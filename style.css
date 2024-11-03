@@ -20,14 +20,19 @@ body, html {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-    width: 100%;
+    flex: 1;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-container {
@@ -41,6 +46,10 @@ body, html {
     margin: 20px auto;
     transition: all 0.5s ease;
     animation: fadeIn 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
 }
 
 @keyframes fadeIn {
@@ -244,10 +253,14 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
+    padding-top: 40px;
     background: var(--glass-background);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    margin-top: 40px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .music-control {
@@ -286,3 +299,15 @@ footer {
     color: var(--text-color);
     margin-top: 10px;
 }
+
+.btn {
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    color: whitesmoke;
+    background-color: #fa709a;
+    padding: 0.8rem 1.8rem;
+    border-radius: 2rem;
+    cursor: pointer;
+  }

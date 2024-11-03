@@ -310,4 +310,28 @@ footer {
     padding: 0.8rem 1.8rem;
     border-radius: 2rem;
     cursor: pointer;
-  }
+}
+
+@media (max-width: 600px) {
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .lbutton {
+        align-self: flex-start;
+    }
+
+    .rbutton {
+        align-self: flex-end;
+    }
+
+    .tbutton {
+        margin-bottom: 5px;
+    }
+
+    .bbutton {
+        margin-top: 5px;
+    }
+}  
